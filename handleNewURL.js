@@ -1,9 +1,7 @@
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 
-// production url
-//const url = process.env.MONGOLAB_URI;
-const url = 'mongodb://localhost:27017/urls'; // REMOVE THIS WHEN COMPLETE
+const url = process.env.MONGOLAB_URI;
 
 function handleNewURL(request, response) {
   const new_url = request.params.url;
