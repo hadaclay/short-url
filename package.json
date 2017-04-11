@@ -1,0 +1,21 @@
+{
+  "name": "short-url",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "freecodecamp",
+    "mongo",
+    "short-url"
+  ],
+  "author": "Clayton Hadaway <me@hadaclay.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "hashids": "^1.1.1",
+    "mongodb": "^2.2.25"
+  }
+}
