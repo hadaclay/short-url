@@ -1,16 +1,27 @@
 <html>
 <head>
   <title>Short URL</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style>
-    h1 {
-      font: 1.2em sans-serif;
+    h1, h2, h3, code, p {
+      text-align: center
+    }
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
       text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>
-    Usage: https://blooming-journey-51884.herokuapp.com/new/https://example.com
-  </h1>
+  <h1>Short URL</h1>
+  <h2>URL Shortener Microservice</h2>
+  <code class="center-block">https://hc-shorturl.herokuapp.com/<em>new/https://example.com</em></code>
+  <h3>Example Output:</h3>
+  <code class="center-block">{"original_url":"https://google.com","short_url":"https://hc-shorturl.herokuapp.com/se2jg"}</code>
+  <p>Going to <a href="https://hc-shorturl.herokuapp.com/se2jg">https://hc-shorturl.herokuapp.com/se2jg</a> redirects to <a href="https://google.com">google.com</a></p>
+  <footer class="footer">by <a href="https://hadaclay.com">@hadaclay</a></footer>
 </body>
 </html>

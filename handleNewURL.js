@@ -22,6 +22,7 @@ function handleNewURL(request, response) {
       .toArray((err, docs) => {
         if (err) throw err;
         
+        // If not, generate id and add to db
         if (docs.length === 0) {
           const host_url = request.protocol + '://' + request.hostname + '/';
           const new_id = Math.random().toString(36).substr(2, 5);
@@ -32,6 +33,7 @@ function handleNewURL(request, response) {
           urls.insert(new_entry);
         }
         
+        // Otherwise, return old url entry from db
         else response.send(docs[0]);
         
         db.close();
