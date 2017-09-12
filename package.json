@@ -1,10 +1,10 @@
 {
   "name": "short-url",
   "version": "0.1.0",
-  "description": "",
+  "description": "Shortens URLs",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node start.js"
   },
   "keywords": [
     "freecodecamp",
@@ -14,7 +14,9 @@
   "author": "Clayton Hadaway <me@hadaclay.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.2",
-    "mongodb": "^2.2.25"
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.11"
   }
 }

@@ -1,27 +1,51 @@
 <html>
+
 <head>
   <title>Short URL</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
   <style>
-    h1, h2, h3, code, p {
+    h1,
+    h2,
+    h3,
+    code,
+    p {
       text-align: center
     }
+
     .footer {
-      position: absolute;
-      bottom: 0;
       width: 100%;
       height: 30px;
       text-align: center;
     }
   </style>
 </head>
+
 <body>
-  <h1>Short URL</h1>
-  <h2>URL Shortener Microservice</h2>
-  <code class="center-block">https://hc-shorturl.herokuapp.com/<em>new/https://example.com</em></code>
-  <h3>Example Output:</h3>
-  <code class="center-block">{"original_url":"https://google.com","short_url":"https://hc-shorturl.herokuapp.com/se2jg"}</code>
-  <p>Going to <a href="https://hc-shorturl.herokuapp.com/dk98d">http://hc-shorturl.herokuapp.com/dk98d</a> redirects to <a href="https://google.com">google.com</a></p>
-  <footer class="footer">by <a href="https://hadaclay.com">@hadaclay</a></footer>
+  <div class="container">
+    <h1>Short URL</h1>
+    <h2>URL Shortener Microservice</h2>
+    <code class="center-block">
+          <span>
+            <span class="domain-text"><em>new/https://example.com</em></span>
+          </span>
+        </code>
+    <h3>Example Output:</h3>
+    <code class="center-block">{"original_url":"https://google.com","short_url":"<span class="domain-text">6qujd</span>"}</code>
+    <p>Going to
+      <a class="domain-text">
+            <span class="domain-text"></span>6qujd</a> redirects to <a href="https://google.com">google.com</a></p>
+    <footer class="footer">by <a href="https://hadaclay.com" style="color:#1793CC">@hadaclay</a></footer>
+  </div>
+
+  <script>
+    const urls = [...document.querySelectorAll('.domain-text')];
+    urls.map(url => {
+      url.tagName === 'A' ?
+        url.href = document.URL + '6qujd' :
+        url.innerText = document.URL + url.innerText;
+    });
+  </script>
 </body>
+
 </html>
