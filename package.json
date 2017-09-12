@@ -2,7 +2,10 @@
   "name": "short-url",
   "version": "0.1.0",
   "description": "Shortens URLs",
-  "main": "index.js",
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "main": "start.js",
   "scripts": {
     "start": "node start.js"
   },
